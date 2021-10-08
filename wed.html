@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wednesday</title>
+    <link rel="stylesheet" href="wed.css">
+</head>
+<body onload="startTime()">
+     
+    <div class="wed">
+        <div class="logo">
+            <img src="wed.svg" alt="logo">
+        </div>
+        <div id="txt"></div>
+        <script>    
+        function startTime() {
+          const today = new  Date();
+          let h = today.getHours();
+          let m = today.getMinutes();
+          let s = today.getSeconds();
+          m = checkTime(m);
+          s = checkTime(s);
+          document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+          setTimeout(startTime, 1000);
+        }
+        
+        function checkTime(i) {
+          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+          return i;
+        }
+        </script>
+        <div class="menu">
+            <ul class="classes">
+                9 - 11
+                <li><a href="https://tcd.blackboard.com/webapps/blackboard/execute/launcher?type=Course&id=_72181_1&url=">3c7 Digital Systems Design</a></li>
+                2 - 4
+                <li><a href="https://tcd.blackboard.com/webapps/blackboard/execute/launcher?type=Course&id=_72181_1&url=">3c7 Digital Systems Design</a></li>
+                4 - 5
+                <li><a href="https://tcd.blackboard.com/webapps/blackboard/execute/launcher?type=Course&id=_72177_1&url=">3c1 Signals and Systems</a></li>
+                5 - 6 :
+                <li><a href="https://tcd.blackboard.com/webapps/blackboard/execute/launcher?type=Course&id=_72177_1&url=">3c1 Signals and Systems</a></li>
+                
+            </ul>
+        </div>
+    </div>
+    
+</body>
+</html>

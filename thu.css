@@ -1,0 +1,37 @@
+* {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+body {
+  background-image: url(4.jpg);
+  height: 100%;
+  width: 100%;
+  background-repeat: repeat-y;
+  font-size: 2rem;
+  color: bisque;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  background-size: contain;
+}
+
+.menu {
+  padding: 5rem 0;
+}
+
+.menu a {
+  display: block;
+  font-size: 1.5rem;
+  padding: 1.5rem;
+  color: darkorange;
+  transition: all 0.3s linear;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background-color: #f8a5a5;
+  padding: 2rem;
+  color: black;
+}

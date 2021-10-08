@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuesday</title>
+    <link rel="stylesheet" href="tue.css">
+</head>
+<body onload="startTime()">
+    <div class="tue">
+        <div class="logo">
+            <img src="tue.svg" alt="logo">
+        </div>
+        <div id="txt"></div>
+        <script>    
+        function startTime() {
+          const today = new  Date();
+          let h = today.getHours();
+          let m = today.getMinutes();
+          let s = today.getSeconds();
+          m = checkTime(m);
+          s = checkTime(s);
+          document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+          setTimeout(startTime, 1000);
+        }
+        
+        function checkTime(i) {
+          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+          return i;
+        }
+        </script>
+        <div class="menu">
+            <ul class="classes">
+                <li>
+                    11 - 12 :
+                    <a href="https://tcd.blackboard.com/webapps/blackboard/execute/launcher?type=Course&id=_72181_1&url=">3c7 Digital Systems Design</a>
+                </li>
+                <li>
+                    2 - 3 :
+                    <a href="https://tcd.blackboard.com/webapps/blackboard/execute/launcher?type=Course&id=_72177_1&url=">3c1 Signals and Systems</a>
+                </li>
+                <li>
+                    3 - 4 :
+                    <a href="https://tcd.blackboard.com/webapps/blackboard/execute/launcher?type=Course&id=_73178_1&url=">Engineering Mathematics V</a>
+                </li>
+                <li>
+                    4 - 5:
+                    <a href="https://www.scss.tcd.ie/John.Waldron/CSU33D01/CSU33D01.html">Microprocessor Systems CSU33D01-202122: Microprocessor Systems</a>
+                </li>
+            </ul>    
+        </div>
+    </div>
+    
+</body>
+</html>

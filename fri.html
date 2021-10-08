@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friday</title>
+    <link rel="stylesheet" href="fri.css">
+</head>
+<body onload="startTime()">
+    <div class="fri">
+        <div class="logo">
+            <img src="fri.svg" alt="logo">
+        </div>
+        <div id="txt"></div>
+        <script>    
+        function startTime() {
+          const today = new  Date();
+          let h = today.getHours();
+          let m = today.getMinutes();
+          let s = today.getSeconds();
+          m = checkTime(m);
+          s = checkTime(s);
+          document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+          setTimeout(startTime, 1000);
+        }
+        
+        function checkTime(i) {
+          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+          return i;
+        }
+        </script>
+        <div class="menu">
+            <ul class="classes">
+                10 - 11 : <li><a href="https://www.scss.tcd.ie/John.Waldron/CSU33D01/CSU33D01.html">Microprocessor Systems CSU33D01-202122: Microprocessor Systems</a></li>
+                12 - 1 : <li><a href="https://tcd.blackboard.com/webapps/blackboard/execute/launcher?type=Course&id=_71886_1&url=">Data Structures</a></li> 
+                2 - 5 :<li><a href="https://tcd.blackboard.com/webapps/blackboard/execute/launcher?type=Course&id=_71886_1&url=">Data Structures</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

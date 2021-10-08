@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monday</title>
+    <link rel="stylesheet" href="mon.css">
+</head>
+<body onload="startTime()">    
+    
+    <div class="mon">
+        <div class="logo">
+            <img src="mon.svg" alt="logo">
+        </div>
+        <div id="txt"></div>
+        <script>    
+        function startTime() {
+          const today = new  Date();
+          let h = today.getHours();
+          let m = today.getMinutes();
+          let s = today.getSeconds();
+          m = checkTime(m);
+          s = checkTime(s);
+          document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+          setTimeout(startTime, 1000);
+        }
+        
+        function checkTime(i) {
+          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+          return i;
+        }
+        </script>
+        <ul class="menu">
+            <li>
+                9 - 12 :
+                <a href="https://tcd.blackboard.com/webapps/blackboard/execute/launcher?type=Course&id=_72138_1&url=">Electronic Engineering (AP2.28 - Laboratory)</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
